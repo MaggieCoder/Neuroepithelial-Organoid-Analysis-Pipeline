@@ -171,5 +171,3 @@ This analysis will provide insights into the structural organization and polarit
 - Generate labeled images, plots, and a summary report.
 
 ---
-
-You can now update the README file with this enhanced content and commit the changes to your GitHub repository. Let me know if you need further assistance with the update process!
