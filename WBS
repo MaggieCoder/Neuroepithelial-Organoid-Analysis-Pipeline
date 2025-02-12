@@ -1,0 +1,70 @@
+📑 Work Breakdown Structure (WBS) for Apical-in & Apical-out Classification Project
+1️⃣ Project Initialization
+1.1 Define Project Goals & Scope
+🔹 Identify biological question: Apical-in vs. Apical-out classification
+🔹 Define image processing & classification requirements
+🔹 Determine expected outputs (CSV, overlay image)
+
+1.2 Set Up Development Environment
+✅ Install Python 3.8+
+✅ Install required Python libraries (numpy, matplotlib, scikit-image, etc.)
+✅ Ensure compatibility across macOS, Windows, and Linux
+
+1.3 Organize Project Files
+📂 Create project directory structure
+📂 Prepare dataset (WIP006_G10C.tif)
+📂 Create necessary documentation (README.md, SRS.md, datasets.md)
+
+2️⃣ Data Preparation & Preprocessing
+2.1 Load & Convert Images
+🖼️ Read .tif images into Python using skimage.io.imread()
+🎨 Convert multi-channel images to grayscale if necessary
+
+2.2 Apply Image Segmentation
+🔹 Use Otsu’s thresholding to create a binary mask
+🔹 Fill holes & remove small objects to refine cell regions
+🔹 Apply morphological closing for noise reduction
+
+2.3 Identify & Label Cells
+🏷️ Detect individual cells using skimage.measure.label()
+📊 Extract shape properties & intensity values
+
+3️⃣ Feature Extraction & Classification
+3.1 Compute Distance Transform
+📏 Measure each pixel's distance to the nearest boundary using scipy.ndimage.distance_transform_edt()
+
+3.2 Identify High-Intensity Regions
+💡 Define high-intensity pixels as > 80% of max intensity
+📊 Compute mean high-intensity distance
+
+3.3 Classify Cells
+🎯 Compute distance ratio (mean high-intensity distance / max distance)
+🔴 Apical-in = High-intensity pixels concentrated centrally
+🔵 Apical-out = High-intensity pixels near the periphery
+
+4️⃣ Results Generation & Output
+4.1 Save Classification Data
+✅ Store results in a CSV file (cell_classification_results.csv)
+✅ Include:
+
+Cell ID, total area, apical area, intensity ratio, classification
+4.2 Generate & Save Overlay Image
+🖼️ Create a color-coded image (cell_classification_overlay.png)
+🔴 Red = Apical-in | 🔵 Blue = Apical-out
+✅ Save with skimage.io.imsave()
+
+4.3 Display Visual Output
+📊 Show original vs. classified image side-by-side with matplotlib
+
+5️⃣ Project Documentation & Submission
+5.1 Complete Documentation
+📄 Finalize README.md, SRS.md, datasets.md
+📄 Include pipeline workflow overview
+
+5.2 Code & Repo Management
+✅ Upload final code to GitHub repository
+✅ Add necessary comments & docstrings in Python files
+
+5.3 Final Testing & Validation
+✅ Test with different images for robustness
+✅ Ensure proper classification & correct outputs
