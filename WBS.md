@@ -1,5 +1,5 @@
 ---
-title: "GitHub WBS: Apical-in & Apical-out Image Analysis Pipeline"
+"GitHub WBS: Apical-in & Apical-out Image Analysis Pipeline"
 ---
 
 # **GitHub WBS: Apical-in & Apical-out Image Analysis Pipeline**
