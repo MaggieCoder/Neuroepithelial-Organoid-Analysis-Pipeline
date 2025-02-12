@@ -1,4 +1,7 @@
 ---
+title: "GitHub WBS: Apical-in & Apical-out Image Analysis Pipeline"
+---
+
 # **GitHub WBS: Apical-in & Apical-out Image Analysis Pipeline**
 ## **1. Repository Setup**
 - [ ] Create a GitHub repository (e.g., `Apical_Analysis`)
@@ -43,7 +46,6 @@
 - [ ] Save classification results as a CSV file
 - [ ] Generate an overlay image with colored classification
 - [ ] Save and display overlay visualization
-
 ---
 
 ## **3. Testing & Debugging**
@@ -51,7 +53,6 @@
 - [ ] Implement unit tests for preprocessing, segmentation, and classification
 - [ ] Validate classification accuracy on known datasets
 - [ ] Debug errors in cell detection and classification
-
 ---
 
 ## **4. Documentation & User Guide**
@@ -63,7 +64,6 @@
 - [ ] Add inline code comments for better readability
 - [ ] Provide sample images in `data/` folder
 - [ ] Create a troubleshooting guide for common issues
-
 ---
 
 ## **5. GitHub Automation & Finalization**
@@ -71,7 +71,4 @@
 - [ ] Set up GitHub Actions for automated testing (if needed)
 - [ ] Release first stable version (`v1.0`)
 - [ ] Share repository link with collaborators or publish
-
 ---
-
-这个 WBS 详细分解了你的项目开发流程，让你在 GitHub 上高效管理代码。你可以根据需要调整任务优先级或增加额外的功能，比如交互式 GUI 或更高级的统计分析！ 🚀
