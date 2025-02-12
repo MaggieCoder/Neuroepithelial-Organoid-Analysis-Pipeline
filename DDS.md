@@ -1,5 +1,3 @@
-Here is your **Design Document Specification (DDS)** in English. This document outlines the system design, module dependencies, and workflow structure.
-
 ---
 
 ## **📜 Design Document Specification (DDS) for Apical-in & Apical-out Classification Project**  
@@ -8,7 +6,7 @@ Here is your **Design Document Specification (DDS)** in English. This document o
 
 ## **1️⃣ Project Overview**  
 ### **1.1 Purpose**  
-This project aims to classify **Apical-in** and **Apical-out** cell configurations in neuroepithelial organoids based on ZO1-EGFP fluorescence intensity and spatial distribution. The tool processes `.tif` microscopy images, segments cells, extracts intensity-based features, and outputs classification results as both CSV files and overlay images.
+This project aims to classify **Apical-in** and **Apical-out** cell configurations in neuroepithelial organoids based on ZO1-EGFP fluorescence intensity and spatial distribution. The tool processes `.[...]
 
 ### **1.2 Scope**  
 - Load `.tif` images (grayscale or single-channel fluorescence).  
@@ -19,7 +17,7 @@ This project aims to classify **Apical-in** and **Apical-out** cell configuratio
 - Generate structured output data (CSV file) and a **color-coded overlay image** for visualization.  
 
 ### **1.3 System Context**  
-The software operates in a **research computing environment**, primarily for analyzing microscopy images in neuroscience and organoid development studies. The system must be efficient, scalable, and flexible for processing different experimental datasets.
+The software operates in a **research computing environment**, primarily for analyzing microscopy images in neuroscience and organoid development studies. The system must be efficient, scalable, and f[...]
 
 ---
 
@@ -93,7 +91,7 @@ The project is divided into **five core modules**, each responsible for a differ
 **Processes:**  
 - Save **CSV file** with classification data  
 - Generate **color-coded overlay image**:
--![Screenshot 2025-02-12 at 12.03.21](images/Screenshot_2025-02-12_at_12.03.21.png)
+-![output.png](image/output.png)
   - 🔴 **Red** for Apical-in  
   - 🔵 **Blue** for Apical-out  
 - Display **original vs. classified image**  
@@ -111,9 +109,6 @@ Step 2: Apply Otsu thresholding → Segment cells → Remove small objects
 Step 3: Compute Distance Transform → Identify high-intensity regions
 Step 4: Compute distance ratio → Classify as Apical-in / Apical-out
 Step 5: Save results (CSV + overlay image) → Display output
-```
-
----
 
 ## **5️⃣ System Constraints & Performance Considerations**  
 ### **5.1 Performance Requirements**  
