@@ -14,8 +14,9 @@ This project aims to classify **Apical-in** and **Apical-out** cell configuratio
 - Identify and label individual cells.  
 - Extract intensity-based spatial features.  
 - Classify each cell as **Apical-in** or **Apical-out** using a **distance ratio metric**.  
-- Generate structured output data (CSV file) and a **color-coded overlay image** for visualization.  
+- Generate structured output data (CSV file) and a **color-coded overlay image** for visualization.
 
+![Diagram Layout](image/Diagram%20Layout.png)
 ### **1.3 System Context**  
 The software operates in a **research computing environment**, primarily for analyzing microscopy images in neuroscience and organoid development studies. The system must be efficient, scalable, and f[...]
 
@@ -103,11 +104,14 @@ The project is divided into **five core modules**, each responsible for a differ
 ## **4️⃣ Data Flow & Workflow**  
 Below is a **step-by-step workflow** for the system:
 
-```plaintext
 Step 1: Load image → Convert to grayscale (if needed) → Normalize intensity
+
 Step 2: Apply Otsu thresholding → Segment cells → Remove small objects
+
 Step 3: Compute Distance Transform → Identify high-intensity regions
+
 Step 4: Compute distance ratio → Classify as Apical-in / Apical-out
+
 Step 5: Save results (CSV + overlay image) → Display output
 
 ## **5️⃣ System Constraints & Performance Considerations**  
