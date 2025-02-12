@@ -19,6 +19,23 @@ By studying **apical membrane formation** and **epithelial cell polarity**, we c
 
 ---
 
+## 🎯 Research Goal
+
+🧬 **Biological Question:**
+> How do apical membrane formation and epithelial polarity emerge in neuroepithelial organoids?
+
+📜 **Project Description:**
+This project develops an image analysis pipeline that quantitatively classifies neuroepithelial organoid cells into **Apical-in** or **Apical-out** categories based on fluorescence intensity distribution. The classification helps in understanding the developmental mechanisms of epithelial polarity.
+
+📸 **Input Data:**
+- TIFF images of neuroepithelial organoids stained for ZO1-EGFP
+
+📊 **Output Data:**
+- **CSV File:** Quantitative classification of cells (Apical-in/Apical-out)
+- **Overlay Image:** Color-coded cell classifications (🔵 Blue = Apical-out, 🔴 Red = Apical-in)
+
+---
+
 ## 🛠️ Project Structure
 
 📂 **Project Files:**
@@ -33,20 +50,6 @@ By studying **apical membrane formation** and **epithelial cell polarity**, we c
 📜 cell_classification_results.csv  # Output file
 📜 cell_classification_overlay.tif  # Output image
 ```
-
----
-
-## 🎯 Research Goal
-
-🧬 **Biological Question:**
-> How do apical membrane formation and epithelial polarity emerge in neuroepithelial organoids?
-
-📸 **Input Data:**
-- TIFF images of neuroepithelial organoids stained for ZO1-EGFP
-
-📊 **Output Data:**
-- **CSV File:** Quantitative classification of cells (Apical-in/Apical-out)
-- **Overlay Image:** Color-coded cell classifications (🔵 Blue = Apical-out, 🔴 Red = Apical-in)
 
 ---
 
@@ -129,7 +132,8 @@ This project is licensed under the **MIT License**. Feel free to use and modify 
 
 ---
 
-<p align="center">
-  Made with 💖 by <b>Feng Geshan</b>
+<p align="center"> 
+  Made with 💖 by <b>Feng Geshan</b> 
 </p>
+
 
