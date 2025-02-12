@@ -94,9 +94,7 @@ $ python main.py --image /path/to/your/image.tif
 
 ## 💖 Visualization
 
-<p align="center">
-  <'/Users/fenggeshan/Desktop/Screenshot 2025-02-12 at 11.55.44.png'>
-</p>
+![Uploading Screenshot 2025-02-12 at 11.55.44.png…]()
 
 **Legend:**
 - 🔵 **Blue** = Apical-out
