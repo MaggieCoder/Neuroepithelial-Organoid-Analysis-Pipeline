@@ -1,7 +1,5 @@
 ---
-
 # **GitHub WBS: Apical-in & Apical-out Image Analysis Pipeline**
-
 ## **1. Repository Setup**
 - [ ] Create a GitHub repository (e.g., `Apical_Analysis`)
 - [ ] Add a `README.md` file with project description
@@ -12,7 +10,6 @@
   - `results/` (for output CSV and images)
   - `docs/` (for documentation)
 - [ ] Add an MIT or BSD license
-
 ---
 
 ## **2. Core Functionality Implementation**
