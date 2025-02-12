@@ -1,5 +1,5 @@
 <h1 align="center">
-  🎀 Cell Classification Pipeline 🎀<br>
+  🎀 Neuroepithelial-Organoid-Analysis-Pipeline 🎀<br>
   <sub>A Bioinformatics Project for Image Analysis</sub>
 </h1>
 
