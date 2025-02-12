@@ -1,7 +1,3 @@
----
-"GitHub WBS: Apical-in & Apical-out Image Analysis Pipeline"
----
-
 # **GitHub WBS: Apical-in & Apical-out Image Analysis Pipeline**
 ## **1. Repository Setup**
 - [ ] Create a GitHub repository (e.g., `Apical_Analysis`)
