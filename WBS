@@ -1,70 +1,82 @@
-📑 Work Breakdown Structure (WBS) for Apical-in & Apical-out Classification Project
-1️⃣ Project Initialization
-1.1 Define Project Goals & Scope
-🔹 Identify biological question: Apical-in vs. Apical-out classification
-🔹 Define image processing & classification requirements
-🔹 Determine expected outputs (CSV, overlay image)
+下面是基于你的 `Apicalin&out.py` 代码的 GitHub WBS (Work Breakdown Structure)：
 
-1.2 Set Up Development Environment
-✅ Install Python 3.8+
-✅ Install required Python libraries (numpy, matplotlib, scikit-image, etc.)
-✅ Ensure compatibility across macOS, Windows, and Linux
+---
 
-1.3 Organize Project Files
-📂 Create project directory structure
-📂 Prepare dataset (WIP006_G10C.tif)
-📂 Create necessary documentation (README.md, SRS.md, datasets.md)
+# **GitHub WBS: Apical-in & Apical-out Image Analysis Pipeline**
 
-2️⃣ Data Preparation & Preprocessing
-2.1 Load & Convert Images
-🖼️ Read .tif images into Python using skimage.io.imread()
-🎨 Convert multi-channel images to grayscale if necessary
+## **1. Repository Setup**
+- [ ] Create a GitHub repository (e.g., `Apical_Analysis`)
+- [ ] Add a `README.md` file with project description
+- [ ] Create a `.gitignore` file (ignore `.csv`, `.png`, temporary files)
+- [ ] Set up folder structure:
+  - `src/` (for scripts)
+  - `data/` (for sample images)
+  - `results/` (for output CSV and images)
+  - `docs/` (for documentation)
+- [ ] Add an MIT or BSD license
 
-2.2 Apply Image Segmentation
-🔹 Use Otsu’s thresholding to create a binary mask
-🔹 Fill holes & remove small objects to refine cell regions
-🔹 Apply morphological closing for noise reduction
+---
 
-2.3 Identify & Label Cells
-🏷️ Detect individual cells using skimage.measure.label()
-📊 Extract shape properties & intensity values
+## **2. Core Functionality Implementation**
+### **2.1 Image Preprocessing**
+- [ ] Load `.tif` image using `skimage.io`
+- [ ] Convert to grayscale if necessary
+- [ ] Normalize pixel intensity
+- [ ] (Optional) Invert image if needed
 
-3️⃣ Feature Extraction & Classification
-3.1 Compute Distance Transform
-📏 Measure each pixel's distance to the nearest boundary using scipy.ndimage.distance_transform_edt()
+### **2.2 Segmentation & Cell Detection**
+- [ ] Apply Otsu thresholding for binary segmentation
+- [ ] Fill holes in cell masks
+- [ ] Remove small objects based on `min_cell_area`
+- [ ] Perform morphological closing for better segmentation
 
-3.2 Identify High-Intensity Regions
-💡 Define high-intensity pixels as > 80% of max intensity
-📊 Compute mean high-intensity distance
+### **2.3 Cell Feature Extraction**
+- [ ] Label individual cells
+- [ ] Extract properties using `skimage.measure.regionprops`
+- [ ] Compute Euclidean distance transform for each cell
+- [ ] Identify high-intensity regions based on threshold
+- [ ] Calculate high-intensity distance ratio
 
-3.3 Classify Cells
-🎯 Compute distance ratio (mean high-intensity distance / max distance)
-🔴 Apical-in = High-intensity pixels concentrated centrally
-🔵 Apical-out = High-intensity pixels near the periphery
+### **2.4 Apical-in & Apical-out Classification**
+- [ ] Compute total, apical, and non-apical areas
+- [ ] Determine apical percentage
+- [ ] Classify cells based on `distance_ratio_threshold`
+- [ ] Assign color overlays (blue = Apical-out, red = Apical-in)
 
-4️⃣ Results Generation & Output
-4.1 Save Classification Data
-✅ Store results in a CSV file (cell_classification_results.csv)
-✅ Include:
+### **2.5 Result Output**
+- [ ] Store results in a Pandas DataFrame
+- [ ] Save classification results as a CSV file
+- [ ] Generate an overlay image with colored classification
+- [ ] Save and display overlay visualization
 
-Cell ID, total area, apical area, intensity ratio, classification
-4.2 Generate & Save Overlay Image
-🖼️ Create a color-coded image (cell_classification_overlay.png)
-🔴 Red = Apical-in | 🔵 Blue = Apical-out
-✅ Save with skimage.io.imsave()
+---
 
-4.3 Display Visual Output
-📊 Show original vs. classified image side-by-side with matplotlib
+## **3. Testing & Debugging**
+- [ ] Add test images to `data/`
+- [ ] Implement unit tests for preprocessing, segmentation, and classification
+- [ ] Validate classification accuracy on known datasets
+- [ ] Debug errors in cell detection and classification
 
-5️⃣ Project Documentation & Submission
-5.1 Complete Documentation
-📄 Finalize README.md, SRS.md, datasets.md
-📄 Include pipeline workflow overview
+---
 
-5.2 Code & Repo Management
-✅ Upload final code to GitHub repository
-✅ Add necessary comments & docstrings in Python files
+## **4. Documentation & User Guide**
+- [ ] Write a `README.md` with:
+  - Project overview
+  - Installation guide
+  - Usage instructions
+  - Example results
+- [ ] Add inline code comments for better readability
+- [ ] Provide sample images in `data/` folder
+- [ ] Create a troubleshooting guide for common issues
 
-5.3 Final Testing & Validation
-✅ Test with different images for robustness
-✅ Ensure proper classification & correct outputs
+---
+
+## **5. GitHub Automation & Finalization**
+- [ ] Write a `requirements.txt` or `environment.yml` for dependencies
+- [ ] Set up GitHub Actions for automated testing (if needed)
+- [ ] Release first stable version (`v1.0`)
+- [ ] Share repository link with collaborators or publish
+
+---
+
+这个 WBS 详细分解了你的项目开发流程，让你在 GitHub 上高效管理代码。你可以根据需要调整任务优先级或增加额外的功能，比如交互式 GUI 或更高级的统计分析！ 🚀
