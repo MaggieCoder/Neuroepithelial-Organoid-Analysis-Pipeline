@@ -95,7 +95,7 @@ $ python main.py --image /path/to/your/image.tif
 ## 💖 Visualization
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/fenggeshan/cell-classification/main/example_overlay.png" width="500px">
+  <'/Users/fenggeshan/Desktop/Screenshot 2025-02-12 at 11.55.44.png'>
 </p>
 
 **Legend:**
