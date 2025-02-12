@@ -75,19 +75,7 @@ The project is divided into **five core modules**, each responsible for a differ
 
 ---
 
-### **3.4 Classification Module**  
-**Inputs:** Extracted features (distance ratio)  
-**Processes:**  
-- Compare **distance ratio** to a threshold (default `0.5`)  
-- Assign label:  
-  - 🔴 **Apical-in** if high-intensity pixels are centrally concentrated  
-  - 🔵 **Apical-out** if high-intensity pixels are near cell edges  
-
-**Output:** Classified cell labels  
-
----
-
-### **3.5 Results Generation Module**  
+### **3.4 Results Generation Module**  
 **Inputs:** Classified cell labels, segmented image  
 **Processes:**  
 - Save **CSV file** with classification data  
