@@ -117,23 +117,3 @@ To install them manually:
 ```sh
 pip install numpy scipy scikit-image pandas matplotlib
 ```
-
----
-
-## ✨ Contributing
-
-Contributions are welcome! Feel free to submit a pull request or open an issue. 🌷
-
----
-
-## 📜 License
-
-This project is licensed under the **MIT License**. Feel free to use and modify it! 💕
-
----
-
-<p align="center"> 
-  Made with 💖 by <b>Feng Geshan</b> 
-</p>
-
-
