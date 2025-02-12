@@ -93,9 +93,6 @@ $ python main.py --image /path/to/your/image.tif
 ---
 
 ## 💖 Visualization
-![Alt text](URL_to_image)
-![Screenshot 2025-02-12 at 12.03.21](images/Screenshot_2025-02-12_at_12.03.21.png)
-
 **Legend:**
 - 🔵 **Blue** = Apical-out
 - 🔴 **Red** = Apical-in
