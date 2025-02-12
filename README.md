@@ -93,6 +93,7 @@ $ python main.py --image /path/to/your/image.tif
 ---
 
 ## 💖 Visualization
+![output.png](image/output.png)
 **Legend:**
 - 🔵 **Blue** = Apical-out
 - 🔴 **Red** = Apical-in
