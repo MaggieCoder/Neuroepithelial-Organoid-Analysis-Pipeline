@@ -1,113 +1,135 @@
-Here is a well-structured `README.md` file for your **Bioinformatics Project - Cell Classification**. It includes all the required sections and clearly explains the purpose, pipeline, and expected inputs/outputs.
+<h1 align="center">
+  🎀 Cell Classification Pipeline 🎀<br>
+  <sub>A Bioinformatics Project for Image Analysis</sub>
+</h1>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.8%2B-pink" alt="Python Version">
+  <img src="https://img.shields.io/badge/Status-Active-pink" alt="Project Status">
+  <img src="https://img.shields.io/badge/License-MIT-pink" alt="License">
+</p>
 
 ---
 
-### `README.md`
-```markdown
-# Apical-In/Apical-Out Cell Classification
+## 🌸 Overview
 
-## 📌 Biological Question
-This project aims to distinguish between **Apical-In** and **Apical-Out** neuroepithelial organoid cells based on **ZO1-EGFP fluorescence intensity distribution**. The classification is based on the relative positioning of high-intensity pixels within each cell, helping to quantify apical-basal polarity changes in organoid development.
+This bioinformatics pipeline is designed to analyze **neuroepithelial organoids** and classify cells as **Apical-in** or **Apical-out** based on ZO1-EGFP fluorescence intensity. The goal is to generate **quantitative data** for a manuscript currently under revision. 🧫✨
 
-## 📝 Project Description
-This project provides a **semi-automated image analysis pipeline** for classifying cells in fluorescence microscopy images. The pipeline:
-- Segments individual cells based on intensity thresholds.
-- Identifies **high-intensity** pixels corresponding to ZO1-EGFP signal.
-- Computes spatial distributions of these pixels within cells.
-- Classifies cells as **Apical-In** or **Apical-Out** based on their intensity-distance ratio.
+By studying **apical membrane formation** and **epithelial cell polarity**, we can gain insights into the mechanisms that regulate neuroepithelial development! 🧠🔬
 
-## 📂 Project Structure
+---
+
+## 🛠️ Project Structure
+
+📂 **Project Files:**
 ```
-├── image_processing.py        # Handles image loading and preprocessing
-├── segmentation.py            # Performs cell segmentation and labeling
-├── classification.py          # Classifies cells into Apical-In/Apical-Out
-├── utils.py                   # Utility functions for saving files and computing statistics
-├── main.py                    # Main script to run the pipeline
-├── requirements.txt           # List of dependencies
-├── README.md                  # Project documentation
-├── cell_classification_results.csv  # Output file with classification results
-├── cell_classification_overlay.tif  # Output image showing classification
-```
-
-## 🛠️ Programming Environment
-- **Python 3.8+**
-- Developed and tested in **Jupyter Notebook** and **Standalone Python Scripts**.
-
-## 📚 Required Python Libraries
-The pipeline relies on the following scientific libraries:
-- `numpy` - Array computations
-- `pandas` - Data manipulation
-- `matplotlib` - Visualization
-- `scipy` - Mathematical computations
-- `skimage` - Image processing
-- `os` - File handling
-
-To install dependencies, run:
-```bash
-pip install -r requirements.txt
+📜 image_processing.py   # Handles image loading and preprocessing
+📜 segmentation.py       # Performs segmentation and labeling
+📜 classification.py     # Classifies cells into Apical-in/Apical-out
+📜 utils.py              # Utility functions for saving files and computing stats
+📜 main.py               # The main script to run everything
+📜 requirements.txt      # List of dependencies
+📜 README.md             # Project Documentation
+📜 cell_classification_results.csv  # Output file
+📜 cell_classification_overlay.tif  # Output image
 ```
 
-## 🏗️ Additional Tools
-- **Fiji/ImageJ** (optional) – for manual image verification.
-- **Excel or any CSV viewer** – to analyze the classification output.
+---
 
-## 💻 Hardware Requirements
-- A **standard laptop/desktop** with at least **8GB RAM**.
-- Recommended **GPU support** for large image datasets.
+## 🎯 Research Goal
+
+🧬 **Biological Question:**
+> How do apical membrane formation and epithelial polarity emerge in neuroepithelial organoids?
+
+📸 **Input Data:**
+- TIFF images of neuroepithelial organoids stained for ZO1-EGFP
+
+📊 **Output Data:**
+- **CSV File:** Quantitative classification of cells (Apical-in/Apical-out)
+- **Overlay Image:** Color-coded cell classifications (🔵 Blue = Apical-out, 🔴 Red = Apical-in)
 
 ---
 
-## 📊 Input and Output Data
+## 🔧 Installation & Usage
 
-### 📥 Input
-- **Microscopy images** in `.tif` or `.png` format.
-- **ZO1-EGFP labeled fluorescence images** are required.
-- The script can handle **grayscale** and **RGB images** (automatically converts RGB to grayscale).
+💻 **Set up your environment:**
+```sh
+# Clone the repository
+$ git clone https://github.com/fenggeshan/cell-classification.git
+$ cd cell-classification
 
-### 📤 Output
-- **`cell_classification_results.csv`**: A table containing:
-  - Cell ID
-  - Total area (px)
-  - Apical area (high-intensity region)
-  - Apical percentage
-  - Mean intensity-distance ratio
-  - Classification: **Apical-In / Apical-Out**
+# Install dependencies
+$ pip install -r requirements.txt
 
-- **`cell_classification_overlay.tif`**: A visualization where:
-  - **Red cells** = Apical-In
-  - **Blue cells** = Apical-Out
-
----
-
-## 🔬 Pipeline Workflow Overview
-1. **Load Image** – Convert multi-channel images to grayscale.
-2. **Preprocess Image** – Apply thresholding and remove small artifacts.
-3. **Segment Cells** – Label individual cells.
-4. **Extract Features** – Compute apical region size and intensity ratio.
-5. **Classify Cells** – Categorize into **Apical-In** or **Apical-Out**.
-6. **Save Results** – Output a classification table and an overlay image.
-
----
-
-## 🚀 Running the Pipeline
-To process an image, simply run:
-```bash
-python main.py --image_path path/to/image.tif
+# Run the pipeline
+$ python main.py --image /path/to/your/image.tif
 ```
-Modify parameters in `main.py` to adjust thresholds for specific datasets.
 
 ---
 
-## 📌 Citation & Acknowledgments
-If you use this pipeline in your research, please cite:
-- **Feng Geshan (2025).** Apical-In/Apical-Out Cell Classification Pipeline. GitHub Repository: [GitHub Link]
+## 📌 Pipeline Workflow
 
-Special thanks to **Dr. Gabriel Corfas' lab** for the biological framework behind this project.
+1️⃣ **Preprocess Image** 📷
+   - Convert to grayscale
+   - Apply Otsu thresholding to create a binary mask
+   - Remove small objects & fill holes
+
+2️⃣ **Segment Cells** 🔍
+   - Label individual cells
+   - Extract region properties
+
+3️⃣ **Classify Cells** 🎨
+   - Compute distance transform
+   - Measure ZO1 fluorescence intensity
+   - Apply classification rules (Apical-in / Apical-out)
+
+4️⃣ **Generate Outputs** 📊
+   - Save **CSV file** with cell measurements
+   - Save **Overlay Image** for visualization
 
 ---
 
-## 📧 Contact
-For questions, suggestions, or collaborations, contact **Feng Geshan** at:  
-📩 **geshanfeng@umich.edu**  
-🔬 University of Michigan - Ann Arbor | MCDB & Biophysics
+## 💖 Visualization
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/fenggeshan/cell-classification/main/example_overlay.png" width="500px">
+</p>
+
+**Legend:**
+- 🔵 **Blue** = Apical-out
+- 🔴 **Red** = Apical-in
+
+---
+
+## 📌 Dependencies
+
+- Python 3.8+
+- NumPy
+- SciPy
+- Scikit-Image
+- Pandas
+- Matplotlib
+
+To install them manually:
+```sh
+pip install numpy scipy scikit-image pandas matplotlib
 ```
+
+---
+
+## ✨ Contributing
+
+Contributions are welcome! Feel free to submit a pull request or open an issue. 🌷
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**. Feel free to use and modify it! 💕
+
+---
+
+<p align="center">
+  Made with 💖 by <b>Feng Geshan</b>
+</p>
+
