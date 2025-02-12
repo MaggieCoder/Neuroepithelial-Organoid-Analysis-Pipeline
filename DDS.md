@@ -144,8 +144,3 @@ Step 5: Save results (CSV + overlay image) → Display output
 📌 **Scikit-Image Documentation** → [scikit-image.org](https://scikit-image.org/)  
 📌 **SciPy ndimage (Image Processing)** → [SciPy Docs](https://docs.scipy.org/doc/scipy/reference/ndimage.html)  
 📌 **Python Data Analysis (Pandas)** → [Pandas Docs](https://pandas.pydata.org/)  
-
----
-
-## 🎉 **Final Notes**  
-This **DDS document** provides a clear breakdown of the system architecture, data flow, and functional design of the **Apical-in & Apical-out classification project**. Let me know if you need any refinements! 🚀😊
