@@ -93,7 +93,7 @@ The project is divided into **five core modules**, each responsible for a differ
 **Processes:**  
 - Save **CSV file** with classification data  
 - Generate **color-coded overlay image**:
-- ![Design Diagram]('/Users/fenggeshan/Desktop/Screenshot 2025-02-12 at 12.03.21.png')
+-![Screenshot 2025-02-12 at 12.03.21](images/Screenshot_2025-02-12_at_12.03.21.png)
   - 🔴 **Red** for Apical-in  
   - 🔵 **Blue** for Apical-out  
 - Display **original vs. classified image**  
