@@ -99,6 +99,11 @@ $ python main.py --image /path/to/your/image.tif
 - 🔴 **Red** = Apical-in
 
 ---
+## 🧬 How to Interpret Results
+
+When analyzing the results, the **distance ratio** calculated for each cell helps determine its classification:
+- **High Distance Ratio (Apical-in):** Indicates that the cell's apical membrane is more centrally located, suggesting strong epithelial polarity.
+- **Low Distance Ratio (Apical-out):** Indicates that the cell's apical membrane is positioned peripherally, suggesting weaker epithelial polarity.
 
 ## 📌 Dependencies
 
