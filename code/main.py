@@ -6,7 +6,12 @@ import pandas as pd
 def main(image_path):
     img_gray = load_image(image_path)
     labels = segment_cells(img_gray)
-    classification_results = classify_cells(labels, img_gray)
+    classification_results, distance_ratio_threshold, high_intensity_fraction = classify_cells(labels, img_gray)
+
+    # Include thresholds in the results
+    for result in classification_results:
+        result["Distance_Ratio_Threshold"] = distance_ratio_threshold
+        result["High_Intensity_Fraction"] = high_intensity_fraction
 
     # Save results to CSV
     df = pd.DataFrame(classification_results)
