@@ -104,7 +104,33 @@ $ python main.py --image /path/to/your/image.tif
 When analyzing the results, the **distance ratio** calculated for each cell helps determine its classification:
 - **High Distance Ratio (Apical-in):** Indicates that the cell's apical membrane is more centrally located, suggesting strong epithelial polarity.
 - **Low Distance Ratio (Apical-out):** Indicates that the cell's apical membrane is positioned peripherally, suggesting weaker epithelial polarity.
+---
 
+## 📊 Example Output Preview
+
+Here is a sample of what the CSV output file might look like:
+
+```csv
+Cell_ID,Distance_Ratio,Fluorescence_Intensity,Classification
+Original Title: WIP006_G10A.tif
+Image renamed to: Original_Image
+Current Image Title: Original_Image
+Original_Image ID: -64
+Apical_Out Temporary Image ID: -65
+Whole_Cell Mask ID: -66
+Apical_Out Mask ID: -67
+Whole cell area = 396937.477
+Apical-out area = 608.9685 (0.1534 %)
+Apical-in area  = 15 (0.003779 %)
+Segmentation and analysis complete.
+1,0.85,120.3,Apical-in
+2,0.42,98.1,Apical-out
+3,0.76,110.7,Apical-in
+4,0.33,95.4,Apical-out
+5,0.90,125.6,Apical-in
+```
+
+---
 ## 📌 Dependencies
 
 - Python 3.8+
