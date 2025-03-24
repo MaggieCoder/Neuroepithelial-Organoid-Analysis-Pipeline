@@ -109,6 +109,10 @@ Feature 1: Classify Cells
 - 🟡 **Yellow** = Convex Hull Area
 
 ---
+Feature 2: Count Apical-out Cells
+![Analysis Result](image/D.png)
+- 🔵 **Blue** = Apical-out
+- 🟡 **Yellow** = Convex Hull Area
 
 ## 🧬 How to Interpret Results
 
