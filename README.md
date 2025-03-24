@@ -101,6 +101,7 @@ $ python main.py --image /path/to/your/image.tif
 ---
 
 ## 💖 Visualization
+Feature 1: Classify Cells 
 ![output.png](image/output.png)
 **Legend:**
 - 🔵 **Blue** = Apical-out
