@@ -110,7 +110,12 @@ Feature 1: Classify Cells
 
 ---
 Feature 2: Count Apical-out Cells
-![Analysis Result](image/D.png)
+
+<div style="text-align: left;">
+  <img src="image/D.png" alt="Analysis Result" width="400" />
+</div>
+
+**Legend:**
 - 🔵 **Blue** = Apical-out
 - 🟡 **Yellow** = Convex Hull Area
 
