@@ -15,7 +15,7 @@ This dataset was collected from neuroepithelial organoids during apical polarity
 
 ### Data folder location
 
-The data files can be found in the following directory:[GitHub Repository](https://github.com/MaggieCoder/Neuroepithelial-Organoid-Analysis-Pipeline)
+The data files can be found in the following directory:https://github.com/MaggieCoder/Neuroepithelial-Organoid-Analysis-Pipeline/tree/main/image
 
 
 ### Why this dataset is a good example
