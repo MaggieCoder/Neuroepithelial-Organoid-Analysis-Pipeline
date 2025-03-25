@@ -1,9 +1,8 @@
-
 ---
 # Datasets for Apical-in & Apical-out Classification
 
 ## Data Source
-The dataset consists of microscopic images of neuroepithelial organoids expressing ZO1-EGFP. These images are used to classify cell configurations as **Apical-in** or **Apical-out** based on intensity distribution and spatial properties.
+The dataset consists of microscopic images of neuroepithelial organoids expressing ZO1-EGFP. These images are used to classify cell configurations as **Apical-in** or **Apical-out** based on intensity distribution.
 
 ### Data Description
 - **File Format**: `.tif` (Tagged Image File Format)
@@ -20,7 +19,7 @@ To ensure the dataset meets the project requirements, the following validation s
 
 ## Data Availability
 - **Storage**: Hosted in a secure repository.
-- **Dataset Repository**: [GitHub Repository](https://github.com/your-repo/dataset) (or alternative storage)
+- **Dataset Repository**: [GitHub Repository](https://github.com/MaggieCoder/Neuroepithelial-Organoid-Analysis-Pipeline) (or alternative storage)
 - **Access**: Available upon request.
 
 ## Expected Outputs
