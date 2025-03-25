@@ -18,6 +18,9 @@ This bioinformatics pipeline is designed to analyze **neuroepithelial organoids*
 By studying **apical membrane formation** and **epithelial cell polarity**, we can gain insights into the mechanisms that regulate neuroepithelial development! 🧠🔬
 
 ---
+## Tutorial
+
+For a comprehensive guide on how to use this repository, please refer to the [Tutorial](./tutorials.ipynb) fil
 
 ## 🎯 Research Goal
 
