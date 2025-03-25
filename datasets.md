@@ -1,58 +1,36 @@
----
-# Datasets for Apical-in & Apical-out Classification
+# Dataset Documentation
 
-## Data Source
-The dataset consists of microscopic images of neuroepithelial organoids expressing ZO1-EGFP. These images are used to classify cell configurations as **Apical-in** or **Apical-out** based on intensity distribution.
+## Example dataset for using the tool
 
-### Data Description
-- **File Format**: `.tif` (Tagged Image File Format)
-- **Channels**: Single-channel grayscale images
-- **Resolution**: Typically 512×512 to 2048×2048 pixels.
-- **Dataset Size**: Images are analyzed individually, with cell segmentation and classification performed for each image.
+We provide an example dataset consisting of four `.tif` microscopy images located in the `data/` folder of this repository. These images are labeled as:
 
-## Data Validation
-To ensure the dataset meets the project requirements, the following validation steps were performed:
-1. **Intensity Normalization**: Image pixel values were scaled between 0 and 1.
-2. **Thresholding (Otsu’s Method)**: Used to segment cells based on grayscale intensity.
-3. **Minimum Cell Area Filtering**: Objects with areas below 100 pixels were removed.
-4. **Distance Transform Analysis**: Used to classify cells based on high-intensity pixel distribution.
+- `WIP006_G12A.tif`
+- `WIP006_G12B.tif`
+- `WIP006_G12C.tif`
+- `WIP006_G12D.tif`
 
-## Data Availability
-- **Storage**: Hosted in a secure repository.
-- **Dataset Repository**: [GitHub Repository](https://github.com/MaggieCoder/Neuroepithelial-Organoid-Analysis-Pipeline) (or alternative storage)
-- **Access**: Available upon request.
+Each image has a resolution of approximately 1000 × 1000 pixels and is either grayscale or RGB depending on acquisition. The total size of the dataset is around 5.2 MB, making it lightweight enough to be included in the repository (well under the 20MB threshold).
 
-## Expected Outputs
-Each processed image generates:
-1. **Cell classification data (CSV)**:
-   - **Format**:
-     | Image ID  | Total Cell Area | Apical Area | Non-Apical Area | Classification |
-     |-----------|----------------|-------------|-----------------|----------------|
-     | img001.tif | 2000 px²       | 1200 px²    | 800 px²         | Apical-in      |
-     | img002.tif | 2500 px²       | 500 px²     | 2000 px²        | Apical-out     |
+This dataset was collected from neuroepithelial organoids during apical polarity screening experiments. It contains representative variations in morphology, including cells with outward-facing apical surfaces (“apical-out” cells). The images are ideal for testing the pipeline's segmentation, filtering, and classification capabilities under various parameter settings.
 
-2. **Annotated overlay image (PNG)**:
-   - **Red**: Apical-in cells
-   - **Blue**: Apical-out cells
+### Data folder location
 
-## Dataset Link
-[Dataset Repository](https://drive.google.com/drive/folders/1BQfEPOGwbs7HZ4LrA8J9Dg5OJGxggvci?usp=drive_link)
+The data files can be found in the following directory:[GitHub Repository](https://github.com/MaggieCoder/Neuroepithelial-Organoid-Analysis-Pipeline)
 
-## Data Loading Example
-```python
-import cv2
-import numpy as np
 
-# Load image
-image = cv2.imread("WIP006_G10C.tif", cv2.IMREAD_GRAYSCALE)
+### Why this dataset is a good example
 
-# Normalize intensity
-image = image / 255.0
+- It is representative of real-world use cases where detecting apical-out polarity is relevant for organoid morphology research.
+- It includes cells of varying shapes, intensities, and areas, allowing for effective demonstration of thresholding and morphological filtering.
+- It is small and fast to process, which makes it convenient for testing and debugging during development.
+- The data leads to clearly interpretable visual results and meaningful summary statistics.
 
-# Apply Otsu thresholding
-_, binary = cv2.threshold(image, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+### Packaging and distribution compliance
 
-# Display processed image
-cv2.imshow("Segmented Cells", binary)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+This project follows standard Python packaging practices for including data files. The dataset is stored in a local `data/` folder and referenced through `parameters.py` in a dictionary structure called `image_files`, ensuring dynamic loading without hardcoding absolute paths.
+
+To comply with Python packaging guidelines, we refer to the official setuptools documentation for including data files in a package:
+
+📦 https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+If this package is to be distributed as a pip-installable module, we would include appropriate entries in `MANIFEST.in` and configure `setup.py` to ensure the `data/` directory is included with the package.
