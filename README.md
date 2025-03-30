@@ -184,12 +184,14 @@ If you use this code or pipeline in your research, please cite the following:
   journal      = {GitHub repository},
   url          = {https://github.com/MaggieCoder/Neuroepithelial-Organoid-Analysis-Pipeline}
 }
-##👩‍💻 Contact / Authors
-Project Lead: Geshan Feng
-Affiliation: University of Michigan – Ann Arbor
-Department: Tidball Lab - Michigan Neuroscience Institute Affiliate 
-Email: geshan@umich.edu
-GitHub: @MaggieCoder
+```
+## 👩‍💻 Contact / Authors
+**Project Lead**: Geshan Feng  
+**Affiliation**: University of Michigan – Ann Arbor  
+**Department**: Tidball Lab - Michigan Neuroscience Institute Affiliate  
+**Email**: geshan@umich.edu  
+**GitHub**: [@MaggieCoder](https://github.com/MaggieCoder)
 
-We welcome feedback and contributions! Please open an issue or submit a pull request for improvements.
+We welcome feedback and contributions!  
+Please open an [issue](https://github.com/MaggieCoder/Neuroepithelial-Organoid-Analysis-Pipeline/issues) or submit a [pull request](https://github.com/MaggieCoder/Neuroepithelial-Organoid-Analysis-Pipeline/pulls) for improvements.
 
