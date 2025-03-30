@@ -42,16 +42,16 @@ This project develops an image analysis pipeline that quantitatively classifies 
 ## 🛠️ Project Structure
 📂 **Project Files:**
 ```
-📜 image_processing.py   # Handles image loading and preprocessing
-📜 segmentation.py       # Performs segmentation and labeling
-📜 classification.py     # Classifies cells into Apical-in/Apical-out
-📜 utils.py              # Utility functions for saving files and computing stats
-📜 main.py               # The main script to run everything
-📜 apical_out_counter.py # Function to count only Apical-out cells
-📜 requirements.txt      # List of dependencies
-📜 README.md             # Project Documentation
-📜 cell_classification_results.csv  # Output file
-📜 cell_classification_overlay.tif  # Output image
+📄 image_processing.py # Handles image loading and preprocessing
+📄 segmentation.py # Performs segmentation and labeling
+📄 classification.py # Classifies cells into Apical-in/Apical-out
+📄 utils.py # Utility functions for saving files and computing stats
+📄 main.py # The main script to run everything
+📄 apical_out_counter.py # Function to count only Apical-out cells
+📄 requirements.txt # List of dependencies
+📄 README.md # Project Documentation
+📄 cell_classification_results.csv # Output file
+📄 cell_classification_overlay.tif # Output image
 ```
 ---
 
