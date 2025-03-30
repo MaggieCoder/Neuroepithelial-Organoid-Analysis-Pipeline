@@ -20,7 +20,8 @@ By studying **apical membrane formation** and **epithelial cell polarity**, we c
 ---
 ## 💁🏻‍♀️Tutorial
 
-For a comprehensive guide on how to use this repository, please refer to the [Tutorial](./tutorials.ipynb) fil
+For a comprehensive guide on how to use this repository, please refer to the [Tutorial](./tutorials.ipynb) fil.
+
 See the [Happy Path Demo](./tutorials/happy_path_demo.ipynb) notebook for a full example run of the pipeline.
 
 
