@@ -171,4 +171,25 @@ pip install numpy scipy scikit-image pandas matplotlib
 ```
 ```
 
-This update highlights the two features so users can clearly see they have two options for counting and classifying the cells.
+## 📖 How to Cite This Project
+
+If you use this code or pipeline in your research, please cite the following:
+
+```bibtex
+@misc{feng2025organoid,
+  author       = {Geshan,Feng},
+  title        = {Neuroepithelial Organoid Analysis Pipeline},
+  year         = {2025},
+  publisher    = {GitHub},
+  journal      = {GitHub repository},
+  url          = {https://github.com/MaggieCoder/Neuroepithelial-Organoid-Analysis-Pipeline}
+}
+##👩‍💻 Contact / Authors
+Project Lead: Geshan Feng
+Affiliation: University of Michigan – Ann Arbor
+Department: Tidball Lab - Michigan Neuroscience Institute Affiliate 
+Email: geshan@umich.edu
+GitHub: @MaggieCoder
+
+We welcome feedback and contributions! Please open an issue or submit a pull request for improvements.
+
