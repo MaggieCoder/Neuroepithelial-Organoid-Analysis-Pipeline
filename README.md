@@ -129,30 +129,28 @@ When analyzing the results, the **distance ratio** calculated for each cell help
 - **Low Distance Ratio (Apical-out):** Indicates that the cell's apical membrane is positioned peripherally, suggesting weaker epithelial polarity.
 
 ---
+### 📊 Cell Classification Results
 
-## 📊 Example Output Preview
+#### 🧪 Individual Cell Data
 
-Here is a sample of what the CSV output file might look like:
+| Image Title   | Cell ID | Min Cell Area | Threshold | Total Area | Classification | 
+|---------------|---------|----------------|-----------|-------------|------------------|
+| Sample_A      | 1       | 100            | 207584    | Apical-out  | 0.268858528452381 |
+| Sample_A      | 2       | 100            | 2852      | Apical-out  | 0.364660368247605 |
+| Sample_A      | 3       | 100            | 112512    | Apical-out  | 0.234049440608914 |
+| Sample_A      | 4       | 100            | 1258      | Apical-out  | 0.389198650290905 |
+| Sample_A      | 5       | 50             | 459536    | Apical-out  | 0.169432771153117 |
+| Sample_A      | 6       | 50             | 2169      | Apical-out  | 0.111597061398164 |
+| Sample_A      | 7       | 50             | 1848      | Apical-out  | 0.354685169924484 |
+| Sample_A      | 8       | 50             | 2920      | Apical-out  | 0.301976520709842 |
+| Sample_A      | 9       | 30             | 556196    | Apical-out  | 0.157386214431226 |
+| Sample_A      | 10      | 30             | 661       | Apical-out  | 0.367607311046904 |
 
-```csv
-Cell_ID,Distance_Ratio,Fluorescence_Intensity,Classification
-Original Title: WIP006_G10A.tif
-Image renamed to: Original_Image
-Current Image Title: Original_Image
-Original_Image ID: -64
-Apical_Out Temporary Image ID: -65
-Whole_Cell Mask ID: -66
-Apical_Out Mask ID: -67
-Whole cell area = 396937.477
-Apical-out area = 608.9685 (0.1534 %)
-Apical-in area  = 15 (0.003779 %)
-Segmentation and analysis complete.
-1,0.85,120.3,Apical-in
-2,0.42,98.1,Apical-out
-3,0.76,110.7,Apical-in
-4,0.33,95.4,Apical-out
-5,0.90,125.6,Apical-in
-```
+#### 🔗 Convex Hull Analysis
+
+| Image Title   | Union Cell Area | Convex Hull Area | Area Ratio (Union / Hull) |
+|---------------|------------------|-------------------|----------------------------|
+| Sample_A      | 556857           | 866297            | 0.642801487249754          |
 
 ---
 
