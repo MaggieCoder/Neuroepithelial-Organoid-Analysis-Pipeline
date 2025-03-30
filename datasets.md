@@ -4,10 +4,10 @@
 
 We provide an example dataset consisting of four `.tif` microscopy images located in the `data/` folder of this repository. These images are labeled as:
 
-- `WIP006_G12A.tif`
-- `WIP006_G12B.tif`
-- `WIP006_G12C.tif`
-- `WIP006_G12D.tif`
+    "Sample_A.tif",
+    "Sample_B.tif",
+    "Sample_C.tif",
+    "Sample_D.tif",
 
 Each image has a resolution of approximately 1000 × 1000 pixels and is either grayscale or RGB depending on acquisition. The total size of the dataset is around 5.2 MB, making it lightweight enough to be included in the repository (well under the 20MB threshold).
 
