@@ -1,6 +1,6 @@
 <h1 align="center">
    Neuroepithelial-Organoid-Analysis-Pipeline <br>
-  <sub>A Bioinformatics Project for Image Analysis</sub>
+  <sub>A Bioinformatics Project for Image Analysis_Tidball Lab</sub>
 </h1>
 
 <p align="center">
