@@ -17,10 +17,10 @@ eccentricity_threshold = 0.4
 
 # -------- Define Image Files --------
 image_files = {
-    "WIP006_G12A":"/Users/fenggeshan/Desktop/tiff/WIP006_G12A.tif",
-    "WIP006_G12B":"/Users/fenggeshan/Desktop/tiff/WIP006_G12B.tif",
-    "WIP006_G12C":"/Users/fenggeshan/Desktop/tiff/WIP006_G12C.tif",
-    "WIP006_G12D":"/Users/fenggeshan/Desktop/tiff/WIP006_G12D.tif",
+    "Sample_A": "path/to/your/images/Sample_A.tif",
+    "Sample_B": "path/to/your/images/Sample_B.tif",
+    "Sample_C": "path/to/your/images/Sample_C.tif",
+    "Sample_D": "path/to/your/images/Sample_D.tif",
 }
 
 def process_image(image_name, image_path, save_dir):
