@@ -11,7 +11,7 @@
 
 ---
 
-## 🌸 Overview
+## Overview
 
 This bioinformatics pipeline is designed to analyze **neuroepithelial organoids** and classify cells as **Apical-in** or **Apical-out** based on ZO1-EGFP fluorescence intensity. The goal is to generate quantitative data on cell polarity configurations to support biological research.
 
