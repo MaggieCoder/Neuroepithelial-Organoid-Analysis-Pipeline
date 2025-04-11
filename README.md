@@ -187,7 +187,7 @@ If you use this code or pipeline in your research, please cite the following:
 }
 ```
 ## 👩‍💻 Contact / Authors
-**Project Lead**: Geshan Feng  
+**Project Lead**: Dr.Andrew Tidball
 **Affiliation**: University of Michigan – Ann Arbor  
 **Department**: Tidball Lab - Michigan Neuroscience Institute Affiliate  
 **Email**: geshan@umich.edu  
