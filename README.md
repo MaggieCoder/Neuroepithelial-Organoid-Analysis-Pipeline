@@ -40,39 +40,58 @@ This project develops an image analysis pipeline that quantitatively classifies 
 - **CSV File:** Quantitative classification of cells (Apical-in/Apical-out)
 - **Overlay Image:** Color-coded cell classifications (🔵 Blue = Apical-out, 🔴 Red = Apical-in, 🟡 Yellow = Convex Hull Area)
 
----
+- Image preprocessing
+- Feature extraction
+- Neuroepithelial cell classification
+- Visualization and result export
+- 🆕 **Highlight Typical Apical-out Cells**: Identify and highlight the top 10% most central Apical-out cells in gold for enhanced visualization.
+- 🆕 **Cell Size Distribution Analysis**: Plot histograms of detected cell areas to reveal the distribution pattern.
+# Neuroepithelial Organoid Analysis Pipeline
 
-## 🛠️ Project Structure
-📂 **Project Files:**
+This project is a Python-based pipeline for the automated analysis of neuroepithelial organoid images, focusing on image processing, feature extraction, and cell classification.
+
+## Project Structure
+
+```text
+Neuroepithelial-Organoid-Analysis-Pipeline-2/
+├── docs/               # Project documentation (DDS, SRS, WBS, datasets, etc.)
+├── src/                # Source code (main.py, noa/, image/)
+├── Tutorials/          # Tutorials and example workflows
+├── LICENSE             # License file
+├── README.md           # Project overview
+├── pyproject.toml      # Project configuration
+└── .gitignore          # Git ignore settings
+
+## Installation
+
+Create and activate a virtual environment, then install dependencies:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 ```
-📄 image_processing.py # Handles image loading and preprocessing
-📄 segmentation.py # Performs segmentation and labeling
-📄 classification.py # Classifies cells into Apical-in/Apical-out
-📄 utils.py # Utility functions for saving files and computing stats
-📄 main.py # The main script to run everything
-📄 apical_out_counter.py # Function to count only Apical-out cells
-📄 requirements.txt # List of dependencies
-📄 README.md # Project Documentation
-📄 cell_classification_results.csv # Output file
-📄 cell_classification_overlay.tif # Output image
-```
----
 
-## 🔧 Installation & Usage
+> **Note**:  
+> If `requirements.txt` does not exist yet, you can generate it with:
+> ```bash
+> pip freeze > requirements.txt
+> ```
 
-💻 **Set up your environment:**
-```sh
-# Clone the repository
-$ git clone https://github.com/MaggieCoder/Neuroepithelial-Organoid-Analysis-Pipeline.git
-$ cd Neuroepithelial-Organoid-Analysis-Pipeline
+## Quick Start
 
-# Install dependencies
-$ pip install -r requirements.txt
+Run the main script:
 
-# Run the pipeline
-$ python main.py --image /path/to/your/image.tif
+```bash
+python src/main.py
 ```
 
+## Features
+
+- Image preprocessing
+- Feature extraction
+- Neuroepithelial cell classification
+- Visualization and result export
 ---
 
 ## 📌 Pipeline Workflow
@@ -96,13 +115,13 @@ $ python main.py --image /path/to/your/image.tif
    - Use `apical_out_counter.py` to count only Apical-out cells
    - **Output:** Only Apical-out cells are counted (🔵 Blue)
 
-3️⃣ **Convex Hull Calculation** 🟡
-   - Calculate the Convex Hull Area to obtain more accurate counts
-   - Overlay Convex Hull Area with a yellow line
+3️⃣ **Highlight Typical Cells** ✨
+   - Rank Apical-out cells based on distance ratio
+   - Highlight the top 10% most central Apical-out cells in gold (🟡)
 
-4️⃣ **Generate Outputs** 📊
-   - Save **CSV file** with cell measurements
-   - Save **Overlay Image** for visualization
+4️⃣ **Plot Cell Size Distribution** 📊
+   - Create a histogram of detected cell areas
+   - Save histogram image to Desktop
 
 ---
 
