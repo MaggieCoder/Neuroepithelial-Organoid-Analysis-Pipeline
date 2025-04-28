@@ -40,6 +40,12 @@ This project develops an image analysis pipeline that quantitatively classifies 
 - **CSV File:** Quantitative classification of cells (Apical-in/Apical-out)
 - **Overlay Image:** Color-coded cell classifications (🔵 Blue = Apical-out, 🔴 Red = Apical-in, 🟡 Yellow = Convex Hull Area)
 
+- Image preprocessing
+- Feature extraction
+- Neuroepithelial cell classification
+- Visualization and result export
+- 🆕 **Highlight Typical Apical-out Cells**: Identify and highlight the top 10% most central Apical-out cells in gold for enhanced visualization.
+- 🆕 **Cell Size Distribution Analysis**: Plot histograms of detected cell areas to reveal the distribution pattern.
 # Neuroepithelial Organoid Analysis Pipeline
 
 This project is a Python-based pipeline for the automated analysis of neuroepithelial organoid images, focusing on image processing, feature extraction, and cell classification.
@@ -109,13 +115,13 @@ python src/main.py
    - Use `apical_out_counter.py` to count only Apical-out cells
    - **Output:** Only Apical-out cells are counted (🔵 Blue)
 
-3️⃣ **Convex Hull Calculation** 🟡
-   - Calculate the Convex Hull Area to obtain more accurate counts
-   - Overlay Convex Hull Area with a yellow line
+3️⃣ **Highlight Typical Cells** ✨
+   - Rank Apical-out cells based on distance ratio
+   - Highlight the top 10% most central Apical-out cells in gold (🟡)
 
-4️⃣ **Generate Outputs** 📊
-   - Save **CSV file** with cell measurements
-   - Save **Overlay Image** for visualization
+4️⃣ **Plot Cell Size Distribution** 📊
+   - Create a histogram of detected cell areas
+   - Save histogram image to Desktop
 
 ---
 
