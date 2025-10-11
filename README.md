@@ -127,19 +127,13 @@ python src/main.py
 
 ## 💖 Visualization
 Feature 1: Classify Cells 
-![output.png](image/output.png)
+![output.png](output.png)
 **Legend:**
 - 🔵 **Blue** = Apical-out
 - 🔴 **Red** = Apical-in
 - 🟡 **Yellow** = Convex Hull Area
-
 ---
 Feature 2: Count Apical-out Cells
-
-<div style="text-align: left;">
-  <img src="image/D.png" alt="Analysis Result" width="400" />
-</div>
-
 **Legend:**
 - 🔵 **Blue** = Apical-out
 - 🟡 **Yellow** = Convex Hull Area
