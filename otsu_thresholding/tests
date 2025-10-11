@@ -1,1 +1,9 @@
+from otsu_thresholding.core import otsu_threshold
+import numpy as np
 
+def test_otsu_threshold():
+    img = np.zeros((10, 10))
+    img[5:] = 1  # Simple synthetic image
+    mask, thresh = otsu_threshold(img)
+    assert mask.shape == img.shape
+    assert 0 < thresh < 1
