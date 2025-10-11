@@ -126,7 +126,6 @@ python src/main.py
 ---
 
 ## 💖 Visualization
-Feature 1: Classify Cells 
 <img src="github_image/output.png" alt="Organoid Analysis Output" width="250"/>
 
 **Legend:**
@@ -134,7 +133,6 @@ Feature 1: Classify Cells
 - 🔴 **Red** = Apical-in
 - 🟡 **Yellow** = Convex Hull Area
 ---
-Feature 2: Count Apical-out Cells
 **Legend:**
 - 🔵 **Blue** = Apical-out
 - 🟡 **Yellow** = Convex Hull Area
