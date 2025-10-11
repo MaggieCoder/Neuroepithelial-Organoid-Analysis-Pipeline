@@ -128,6 +128,8 @@ python src/main.py
 ## 💖 Visualization
 Feature 1: Classify Cells 
 <img src="github_image/output.png" alt="Organoid Analysis Output" width="400"/>
+
+
 **Legend:**
 - 🔵 **Blue** = Apical-out
 - 🔴 **Red** = Apical-in
